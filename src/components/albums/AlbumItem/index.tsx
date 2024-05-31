@@ -69,7 +69,8 @@ export const AlbumItem: FC<Props> = ({
         <img
           src={coverUrl}
           alt='album cover'
-          className='mb-6 h-[153px] w-[146px] rounded-[22px] lg:mb-[30px] lg:h-[177px] lg:w-[170px]'
+          className='mb-6 h-[153px] w-[146px] rounded-[22px]
+            object-cover lg:mb-[30px] lg:h-[177px] lg:w-[170px]'
         />
         <AlbumActionsPopup albumId={id} />
       </div>

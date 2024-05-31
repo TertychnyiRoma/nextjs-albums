@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { useRef, type FC, type ChangeEvent } from 'react';
 import { useAlbumsStore } from '@/providers/albums-store-provider';
 import { AlbumAction } from '@/types/AlbumAction';
 import cn from 'classnames';
@@ -10,21 +10,43 @@ type Props = {
 };
 
 export const AlbumPopupActions: FC<Props> = ({ albumId }) => {
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
   const { albums, setAlbums, setAlbumIdWithOpenPopup, setEditingAlbumId } =
     useAlbumsStore((state) => state);
 
   const handleActionClick = (action: AlbumAction) => {
     if (action === AlbumAction.CHANGE_COVER) {
-      // TODO: implement
+      fileInputRef.current?.click();
     } else if (action === AlbumAction.RENAME) {
       setEditingAlbumId(albumId);
+      setAlbumIdWithOpenPopup(null);
     } else if (action === AlbumAction.DELETE) {
       const filteredAlbums = albums.filter((album) => album.id !== albumId);
 
       setAlbums(filteredAlbums);
+      setAlbumIdWithOpenPopup(null);
     }
+  };
 
+  const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
     setAlbumIdWithOpenPopup(null);
+
+    if (e.target.files?.length) {
+      const file = e.target.files[0];
+
+      const updatedAlbums = albums.map((album) => {
+        if (album.id === albumId) {
+          return {
+            ...album,
+            coverUrl: URL.createObjectURL(file),
+          };
+        }
+
+        return album;
+      });
+
+      setAlbums(updatedAlbums);
+    }
   };
 
   return (
@@ -45,6 +67,12 @@ export const AlbumPopupActions: FC<Props> = ({ albumId }) => {
           </button>
         </li>
       ))}
+      <input
+        type='file'
+        className='hidden'
+        ref={fileInputRef}
+        onChange={handleFileUpload}
+      />
     </ul>
   );
 };
