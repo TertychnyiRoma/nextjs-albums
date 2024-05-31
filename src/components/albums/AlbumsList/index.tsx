@@ -1,10 +1,13 @@
+'use client';
+
 import type { ComponentProps, FC } from 'react';
 import { AlbumItem } from '../AlbumItem';
+import { useAlbumsStore } from '@/providers/albums-store-provider';
 import cn from 'classnames';
 
-const DUMMY_ALBUMS = new Array(6).fill(0);
-
 export const AlbumsList: FC<ComponentProps<'ul'>> = ({ className }) => {
+  const albums = useAlbumsStore((state) => state.albums);
+
   return (
     <ul
       className={cn(
@@ -14,9 +17,9 @@ export const AlbumsList: FC<ComponentProps<'ul'>> = ({ className }) => {
         className,
       )}
     >
-      {DUMMY_ALBUMS.map((album, i) => (
+      {albums.map((album, i) => (
         <li key={i}>
-          <AlbumItem />
+          <AlbumItem album={album} />
         </li>
       ))}
     </ul>
