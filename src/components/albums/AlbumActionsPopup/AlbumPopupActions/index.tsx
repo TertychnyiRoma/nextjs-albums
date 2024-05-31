@@ -10,15 +10,14 @@ type Props = {
 };
 
 export const AlbumPopupActions: FC<Props> = ({ albumId }) => {
-  const { albums, setAlbums, setAlbumIdWithOpenPopup } = useAlbumsStore(
-    (state) => state,
-  );
+  const { albums, setAlbums, setAlbumIdWithOpenPopup, setEditingAlbumId } =
+    useAlbumsStore((state) => state);
 
   const handleActionClick = (action: AlbumAction) => {
     if (action === AlbumAction.CHANGE_COVER) {
       // TODO: implement
     } else if (action === AlbumAction.RENAME) {
-      // TODO: implement
+      setEditingAlbumId(albumId);
     } else if (action === AlbumAction.DELETE) {
       const filteredAlbums = albums.filter((album) => album.id !== albumId);
 
