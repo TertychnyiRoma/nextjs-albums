@@ -1,7 +1,12 @@
 import { AlbumInfo } from '@/components/albums/AlbumInfo';
 import { AlbumSearch } from '@/components/albums/AlbumSearch';
 import { Button } from '@/components/forms/Button';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Albums',
+};
 
 const HomePage = () => (
   <div className='min-h-screen px-3 pb-[100px] pt-8 lg:bg-[#F8F8F8] lg:px-12 lg:pb-[102px]'>

@@ -1,6 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
+import { Metadata } from 'next';
 import { gilroy } from '../fonts';
 import { AddNewAlbumForm } from '@/components/albums/AddNewAlbumForm';
+
+export const metadata: Metadata = {
+  title: 'Add new album',
+};
 
 const AddAlbumPage = () => {
   return (
