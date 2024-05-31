@@ -14,21 +14,32 @@ import {
   FloatingFocusManager,
 } from '@floating-ui/react';
 import type { FC } from 'react';
-import { useState } from 'react';
 import cn from 'classnames';
 import { More } from '../../icons/More';
 import { AlbumPopupActions } from './AlbumPopupActions';
+import { useAlbumsStore } from '@/providers/albums-store-provider';
 
 type Props = {
+  albumId: number;
   triggerClassName?: string;
 };
 
-export const AlbumActionsPopup: FC<Props> = ({ triggerClassName }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const AlbumActionsPopup: FC<Props> = ({ albumId, triggerClassName }) => {
+  const { albumIdWithOpenPopup, setAlbumIdWithOpenPopup } = useAlbumsStore(
+    (state) => state,
+  );
+
+  const isOpen = albumIdWithOpenPopup === albumId;
 
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
-    onOpenChange: setIsOpen,
+    onOpenChange: (open) => {
+      if (open) {
+        setAlbumIdWithOpenPopup(albumId);
+      } else {
+        setAlbumIdWithOpenPopup(null);
+      }
+    },
     middleware: [offset(10), flip(), shift()],
     whileElementsMounted: autoUpdate,
   });
@@ -64,7 +75,7 @@ export const AlbumActionsPopup: FC<Props> = ({ triggerClassName }) => {
             style={floatingStyles}
             {...getFloatingProps()}
           >
-            <AlbumPopupActions />
+            <AlbumPopupActions albumId={albumId} />
           </div>
         </FloatingFocusManager>
       )}

@@ -17,7 +17,7 @@ export const AlbumItem: FC<Props> = ({ album }) => {
           alt='album cover'
           className='mb-6 h-[153px] w-[146px] rounded-[22px] lg:mb-[30px] lg:h-[177px] lg:w-[170px]'
         />
-        <AlbumActionsPopup />
+        <AlbumActionsPopup albumId={album.id} />
       </div>
       <div
         className={`mb-[10px] font-semibold tracking-[3%]
