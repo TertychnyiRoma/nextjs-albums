@@ -16,7 +16,7 @@ import {
 import type { FC } from 'react';
 import { useState } from 'react';
 import cn from 'classnames';
-import { More } from '../icons/More';
+import { More } from '../../icons/More';
 import { AlbumPopupActions } from './AlbumPopupActions';
 
 type Props = {

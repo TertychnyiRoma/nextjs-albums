@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { Search } from '../icons/Search';
+import { Search } from '@/components//icons/Search';
 import { useEffect, useRef } from 'react';
 import type { ChangeEvent } from 'react';
 import debounce from 'lodash.debounce';
