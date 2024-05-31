@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { More } from '../icons/More';
 import { gilroy } from '@/app/fonts';
+import { AlbumActionsPopup } from '../AlbumActionsPopup';
 
 export const AlbumItem = () => {
   return (
@@ -13,7 +13,7 @@ export const AlbumItem = () => {
           height={153}
           className='mb-6'
         />
-        <More className='absolute right-[3px] top-[8px]' />
+        <AlbumActionsPopup />
       </div>
       <div
         className={`mb-[10px] font-semibold tracking-[3%] text-[#1D283D] ${gilroy.className}`}

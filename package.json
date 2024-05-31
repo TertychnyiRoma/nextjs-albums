@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.16",
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
     "lodash.debounce": "^4.0.8",
