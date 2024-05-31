@@ -8,7 +8,9 @@ export const AlbumsList: FC<ComponentProps<'ul'>> = ({ className }) => {
   return (
     <ul
       className={cn(
-        'flex list-none flex-wrap justify-center gap-x-10 gap-y-[50px] min-[390px]:justify-start',
+        'grid place-content-center lg:grid-cols-[repeat(auto-fill,_170px)]',
+        'list-none grid-cols-[repeat(auto-fill,_146px)] gap-x-10',
+        'gap-y-[50px] lg:gap-x-[100px] lg:gap-y-14',
         className,
       )}
     >
