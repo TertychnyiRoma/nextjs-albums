@@ -5,29 +5,20 @@ import { AlbumItem } from '../AlbumItem';
 import { useAlbumsStore } from '@/providers/albums-store-provider';
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
+import { PER_PAGE } from '@/utils/data';
+import { getFoundAlbums } from '@/helpers/getFoundAlbums';
 
 export const AlbumsList: FC<ComponentProps<'ul'>> = ({ className }) => {
   const searchParams = useSearchParams();
   const albums = useAlbumsStore((state) => state.albums);
+  const activePage = Number(searchParams.get('page')) || 1;
+  const foundAlbums = getFoundAlbums(albums, searchParams.get('query'));
+  const paginatedAlbums = foundAlbums.slice(
+    (activePage - 1) * PER_PAGE,
+    activePage * PER_PAGE,
+  );
 
-  const filteredAlbums = albums.filter((album) => {
-    const query = searchParams.get('query');
-
-    if (query) {
-      const lowerCaseQuery = query.toLowerCase();
-      const lowerCaseTitle = album.title.toLowerCase();
-      const lowerCaseArtistName = album.artist.fullName.toLowerCase();
-
-      return (
-        lowerCaseTitle.includes(lowerCaseQuery) ||
-        lowerCaseArtistName.includes(lowerCaseQuery)
-      );
-    }
-
-    return true;
-  });
-
-  if (!filteredAlbums.length) {
+  if (!foundAlbums.length) {
     return (
       <div className='my-12 text-center text-2xl font-medium lg:mt-0'>
         No albums found.
@@ -44,7 +35,7 @@ export const AlbumsList: FC<ComponentProps<'ul'>> = ({ className }) => {
         className,
       )}
     >
-      {filteredAlbums.map((album, i) => (
+      {paginatedAlbums.map((album, i) => (
         <li key={i}>
           <AlbumItem album={album} />
         </li>
