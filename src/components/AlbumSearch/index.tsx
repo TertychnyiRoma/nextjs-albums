@@ -35,7 +35,7 @@ export const AlbumSearch = () => {
   }, [updateQueryParam]);
 
   return (
-    <div className='relative flex w-full'>
+    <div className='relative mb-5 flex w-full'>
       <Search className='absolute left-[18px] top-1/2 -translate-y-1/2' />
       <input
         type='text'
