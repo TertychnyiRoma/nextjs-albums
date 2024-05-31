@@ -4,10 +4,5 @@ export type Album = {
   artist: {
     fullName: string;
   };
-  tracks: [
-    {
-      title: string;
-    },
-  ];
   coverUrl: string;
 };
