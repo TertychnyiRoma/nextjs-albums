@@ -7,11 +7,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'The Beatles',
     },
-    tracks: [
-      {
-        title: 'Come Together',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=1',
   },
   {
@@ -20,11 +15,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Michael Jackson',
     },
-    tracks: [
-      {
-        title: 'Thriller',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=2',
   },
   {
@@ -33,11 +23,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'AC/DC',
     },
-    tracks: [
-      {
-        title: 'Back in Black',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=3',
   },
   {
@@ -46,11 +31,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Pink Floyd',
     },
-    tracks: [
-      {
-        title: 'Time',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=4',
   },
   {
@@ -59,11 +39,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Fleetwood Mac',
     },
-    tracks: [
-      {
-        title: 'Go Your Own Way',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=5',
   },
   {
@@ -72,11 +47,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Eagles',
     },
-    tracks: [
-      {
-        title: 'Hotel California',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=6',
   },
   {
@@ -85,11 +55,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Led Zeppelin',
     },
-    tracks: [
-      {
-        title: 'Stairway to Heaven',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=7',
   },
   {
@@ -98,11 +63,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Bruce Springsteen',
     },
-    tracks: [
-      {
-        title: 'Born to Run',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=8',
   },
   {
@@ -111,11 +71,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Prince',
     },
-    tracks: [
-      {
-        title: 'Purple Rain',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=9',
   },
   {
@@ -124,11 +79,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Pink Floyd',
     },
-    tracks: [
-      {
-        title: 'Another Brick in the Wall',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=10',
   },
   {
@@ -137,11 +87,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Nirvana',
     },
-    tracks: [
-      {
-        title: 'Smells Like Teen Spirit',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=11',
   },
   {
@@ -150,11 +95,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'U2',
     },
-    tracks: [
-      {
-        title: 'With or Without You',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=12',
   },
   {
@@ -163,11 +103,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'The Rolling Stones',
     },
-    tracks: [
-      {
-        title: 'Brown Sugar',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=13',
   },
   {
@@ -176,11 +111,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: "Guns N' Roses",
     },
-    tracks: [
-      {
-        title: "Sweet Child o' Mine",
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=14',
   },
   {
@@ -189,11 +119,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Michael Jackson',
     },
-    tracks: [
-      {
-        title: 'Bad',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=15',
   },
   {
@@ -202,11 +127,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'The Beatles',
     },
-    tracks: [
-      {
-        title: 'Lucy in the Sky with Diamonds',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=16',
   },
   {
@@ -215,11 +135,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Dr. Dre',
     },
-    tracks: [
-      {
-        title: "Nuthin' but a 'G' Thang",
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=17',
   },
   {
@@ -228,11 +143,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Queen',
     },
-    tracks: [
-      {
-        title: 'Bohemian Rhapsody',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=18',
   },
   {
@@ -241,11 +151,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Bob Marley and the Wailers',
     },
-    tracks: [
-      {
-        title: 'One Love',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=19',
   },
   {
@@ -254,11 +159,6 @@ export const DUMMY_ALBUMS: Album[] = [
     artist: {
       fullName: 'Joni Mitchell',
     },
-    tracks: [
-      {
-        title: 'A Case of You',
-      },
-    ],
     coverUrl: 'https://picsum.photos/200/300?image=20',
   },
 ];
